@@ -1,0 +1,13 @@
+version: '3'
+services: 
+    ecs_fargate:
+        build:
+            context: .
+            dockerfile: Dockerfile # Specify the Dockerfile to use
+        env_file: ./.env
+        command: npm start
+        volumes: 
+            - ./app:/app # Update the volume path
+            - /app/node_modules
+        ports:
+            - 3000:3000
