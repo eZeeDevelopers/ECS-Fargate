@@ -7,7 +7,7 @@ services:
         env_file: ./.env
         command: npm start
         volumes: 
-            - ./app:/app # Update the volume path
+            - ./app:/usr/src/app # Update the volume path
             - /app/node_modules
         ports:
             - 3000:3000
